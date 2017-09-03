@@ -1,0 +1,17 @@
+<div class="content">
+  <div class="demo">
+    <div class="item">
+      <h3>等高元素测试
+      </h3>
+      <a href="#" (click)="addBoxItem($event)" class="btn">add</a>
+      <div class="box">
+        <div class="box-item" *ngFor="let box of boxs">
+          <div [ngClass]='box.class'></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="property">
+
+  </div>
+</div>

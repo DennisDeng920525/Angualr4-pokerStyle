@@ -1,0 +1,18 @@
+@import '01base/variables';
+
+.content {
+  .demo {
+    background: #286E2F;
+    width: 70%;
+    float: left;
+    height: 100vh;
+  }
+
+  .property {
+    width: 30%;
+    float: left;
+    background: #3A2238;
+    color: $white;
+    height: 100vh;
+  }
+}
