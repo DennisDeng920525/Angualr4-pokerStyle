@@ -3,15 +3,25 @@
     <div class="item">
       <h3>等高元素测试
       </h3>
-      <a href="#" (click)="addBoxItem($event)" class="btn">add</a>
-      <div class="box">
+      <a (click)="addBoxItem($event)" class="btn">add</a>
+      <div class="box" [ngStyle]='currentStyle'>
         <div class="box-item" *ngFor="let box of boxs">
-          <div [ngClass]='box.class'></div>
+          <app-poker [poker]='box'></app-poker>
         </div>
       </div>
     </div>
   </div>
   <div class="property">
-
+    <h4>属性值</h4>
+    <ul class="pro-group">
+      <li *ngFor='let property of properties'>
+        <p class='proName'>{{property.name}}<a class="btn btn-clear" (click)='clearProperty(property.field, value)'>清除</a></p>
+        <div class='pros'>
+          <a class='btn' *ngFor='let value of property.values' (click)='changeProperty(property.field, value)'>
+            {{value}}
+          </a>
+        </div>
+      </li>
+    </ul>
   </div>
 </div>

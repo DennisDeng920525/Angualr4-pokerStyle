@@ -13,6 +13,8 @@ import { StyleDemoModule } from './style-demo/style-demo.module';
     StyleDemoModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  exports: [
+  ]
 })
 export class AppModule { }

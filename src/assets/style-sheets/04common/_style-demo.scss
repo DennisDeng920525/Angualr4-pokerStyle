@@ -6,6 +6,8 @@
     width: 70%;
     float: left;
     height: 100vh;
+    color: $white;
+    padding: 1rem;
   }
 
   .property {
@@ -14,5 +16,25 @@
     background: #3A2238;
     color: $white;
     height: 100vh;
+    padding: 1rem;
+
+    .pro-group {
+      li {
+        .proName {
+          position: relative;
+
+          .btn-clear {
+            position: absolute;
+            right: 0;
+            top: 0;
+            padding: .2rem;
+            margin: 0;
+            font-size: .875em;
+            border-radius: 5px;
+            background-color: #16a205;
+          }
+        }
+      }
+    }
   }
 }
