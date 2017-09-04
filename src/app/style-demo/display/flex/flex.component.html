@@ -17,9 +17,9 @@
       <li *ngFor='let property of properties'>
         <p class='proName'>{{property.name}}<a class="btn btn-clear" (click)='clearProperty(property.field, value)'>清除</a></p>
         <div class='pros'>
-          <a class='btn' *ngFor='let value of property.values' (click)='changeProperty(property.field, value)'>
+          <button class='btn' *ngFor='let value of property.values' (click)='changeProperty(property.field, value)' tooltip="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
             {{value}}
-          </a>
+          </button>
         </div>
       </li>
     </ul>

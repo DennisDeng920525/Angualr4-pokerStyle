@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { StyleDemoModule } from './style-demo/style-demo.module';
+import { TooltipModule } from 'ngx-bootstrap';
 
 @NgModule({
   declarations: [
