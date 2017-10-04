@@ -2,7 +2,7 @@
 
 .content {
   .demo {
-    background: #286E2F;
+    background: #44586B;
     width: 70%;
     float: left;
     height: 100vh;
@@ -13,26 +13,73 @@
   .property {
     width: 30%;
     float: left;
-    background: #3A2238;
-    color: $white;
+    background: #FAFAFA;
+    color: #000000;
     height: 100vh;
     padding: 1rem;
+
+    h4 {
+      position: relative;
+
+      .btn-clear {
+        position: absolute;
+        right: 0;
+        top: 0;
+        padding: .2rem;
+        margin: 0;
+        font-size: .875rem;
+        border-radius: 5px;
+        color: $white;
+        background-color: $dark-red;
+      }
+    }
 
     .pro-group {
       li {
         .proName {
           position: relative;
 
-          .btn-clear {
-            position: absolute;
-            right: 0;
-            top: 0;
-            padding: .2rem;
-            margin: 0;
-            font-size: .875em;
-            border-radius: 5px;
-            background-color: #16a205;
+          p {
+            display: inline-block;
           }
+        }
+      }
+    }
+
+    .pro-view {
+      background: #282C34;
+      color: #FFF;
+      font-size: 1rem;
+      min-height: 300px;
+      // position: absolute;
+      margin-top: 2rem;
+      bottom: 1rem;
+      // width:calc(100% - 2rem);
+      padding-top: 1rem;
+      padding-left: 1rem;
+
+      pre {
+        word-wrap: break-word;
+        white-space: pre-wrap;
+        word-break: normal;
+        overflow: hidden;
+        height: 20px;
+        color: #AAB1C0;
+
+        span {
+          font-size: 1rem;
+        }
+
+        .tag {
+          color: #C7945E;
+        }
+
+        .cm-variable {
+          color: #AAB1C0;
+        }
+
+        .cm-number {
+          color: #C7945E;
         }
       }
     }

@@ -2,11 +2,12 @@
   padding: 0;
   height: 150px;
   width: calc(635px / 6);
-  display: inline-block
+  display: inline-block;
+  cursor: pointer;
 }
 
 .poker-square-2 {
-  background: url('/assets/image/square_2.png') no-repeat;  
+  background: url('/assets/image/square_2.png') no-repeat;
   background-size: cover;
 }
 
@@ -71,7 +72,7 @@
 }
 
 .poker-club-2 {
-  background: url('/assets/image/club_2.png') no-repeat;  
+  background: url('/assets/image/club_2.png') no-repeat;
   background-size: cover;
 }
 
@@ -136,7 +137,7 @@
 }
 
 .poker-hearts-2 {
-  background: url('/assets/image/hearts_2.png') no-repeat;  
+  background: url('/assets/image/hearts_2.png') no-repeat;
   background-size: cover;
 }
 
@@ -201,7 +202,7 @@
 }
 
 .poker-spade-2 {
-  background: url('/assets/image/spade_2.png') no-repeat;  
+  background: url('/assets/image/spade_2.png') no-repeat;
   background-size: cover;
 }
 
@@ -265,17 +266,17 @@
   background-size: cover;
 }
 
-.poker-king{
+.poker-king {
   background: url('/assets/image/king.png') no-repeat;
   background-size: cover;
 }
 
-.poker-queen{
+.poker-queen {
   background: url('/assets/image/queen.png') no-repeat;
   background-size: cover;
 }
 
-.poker-reverse{
+.poker-reverse {
   background: url('/assets/image/reverse.png') no-repeat;
   background-size: cover;
 

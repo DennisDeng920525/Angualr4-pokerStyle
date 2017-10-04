@@ -1,27 +1,45 @@
 <div class="content">
   <div class="demo">
-    <div class="item">
-      <h3>等高元素测试
-      </h3>
-      <a (click)="addBoxItem($event)" class="btn">add</a>
-      <div class="box" [ngStyle]='currentStyle'>
-        <div class="box-item" *ngFor="let box of boxs">
-          <app-poker [poker]='box'></app-poker>
+    <tabset>
+      <tab heading="等高元素">
+        <div class="item">
+          <button (click)="addBoxItem($event)" class="btn">发牌</button>
+          <div class="box" [ngStyle]='currentStyle'>
+            <div class="box-item" *ngFor="let box of boxs">
+              <app-poker [poker]='box'></app-poker>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
+      </tab>
+      <tab heading="不同高度元素">Static content</tab>
+    </tabset>
   </div>
   <div class="property">
-    <h4>属性值</h4>
+    <h4>属性值
+      <a class="btn btn-clear" (click)='clearProperty()'>清除</a>
+    </h4>
     <ul class="pro-group">
       <li *ngFor='let property of properties'>
-        <p class='proName'>{{property.name}}<a class="btn btn-clear" (click)='clearProperty(property.field, value)'>清除</a></p>
+        <div class='proName'>
+          <p [tooltip]="property.tooltip" placement='right' containerClass="bt-tooltip">{{property.name}}</p>
+        </div>
         <div class='pros'>
-          <button class='btn' *ngFor='let value of property.values' (click)='changeProperty(property.field, value)' tooltip="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
-            {{value}}
+          <button class='btn' *ngFor='let value of property.values' [class.active]='value.isActive' [tooltip]="value.tooltip" placement='bottom'
+            containerClass="vl-tooltip" (click)='changeProperty(property.field, property.values, value)'>
+            {{value.text}}
           </button>
         </div>
       </li>
     </ul>
+    <div class="pro-view">
+      <pre><span class="tag">.box </span>{{"{"}}</pre>
+      <pre><span class="cm-variable">  display</span>: <span class="cm-number">flex</span>;</pre>
+      <pre *ngFor="let style of styleWindow"><span class="cm-variable">  {{style.field}}</span>: <span class="cm-number">{{style.value}}</span>;</pre>
+      <pre>{{"}"}}</pre>
+
+      <!-- <pre><span class="tag">.box .box-item </span>{{"{"}}</pre>
+     
+      <pre>{{"}"}}</pre> -->
+    </div>
   </div>
 </div>

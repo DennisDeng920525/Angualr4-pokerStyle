@@ -9,10 +9,14 @@ import { Poker } from '../../common/model/poker';
 export class PokerComponent implements OnInit {
 
   @Input() poker: Poker;
+  public isBack = true;
 
   constructor() { }
 
   ngOnInit() {
   }
 
+  switch(e) {
+    this.isBack = !this.isBack;
+  }
 }

@@ -1,0 +1,41 @@
+.full-poker {
+  height: 150px;
+  width: calc(635px / 6);
+  margin: .25rem .5rem;
+
+  div {
+    position: absolute;
+    -webkit-transition: .3s ease-in-out;
+    -moz-transition: .3s ease-in-out;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+
+    &:first-child {
+      -webkit-transform: rotateY(0);
+      -moz-transform: rotateY(0);
+      transform: rotateY(0);
+    }
+
+    &:last-child {
+      -webkit-transform: rotateY(180deg);
+      -moz-transform: rotateY(180deg);
+      transform: rotateY(180deg);
+    }
+  }
+
+  &.back {
+    div {
+      &:first-child {
+        -webkit-transform: rotateY(-180deg);
+        -moz-transform: rotateY(-180deg);
+        transform: rotateY(-180deg);
+      }
+
+      &:last-child {
+        -webkit-transform: rotateY(0);
+        -moz-transform: rotateY(0);
+        transform: rotateY(0);
+      }
+    }
+  }
+}

@@ -1,1 +1,6 @@
-<div [ngClass]='poker.class'></div>
+<div class="full-poker" [class.back]='isBack' (click)='switch($event)'>
+    <div [ngClass]="poker.class"></div>
+    <div class='poker-reverse'></div>
+</div>
+
+<!-- <div [ngClass]="poker.class"></div> -->
