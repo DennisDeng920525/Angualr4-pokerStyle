@@ -1,0 +1,41 @@
+@import '01base/variables.scss';
+
+.btn {
+  position: relative;
+  display: inline-block;
+  zoom: 1;
+  white-space: nowrap;
+  vertical-align: middle;
+  font-family: "rbno",Helvetica,sans-serif;
+  text-align: center;
+  text-decoration: none;
+  line-height: normal;
+  color: $btn-color;
+  cursor: pointer;
+  user-select: none;
+  border: none;
+  border-radius: 0;
+  transition: background 150ms ease-in;
+  background-color: $btn-bgcolor;
+  font-size: 1em;
+  padding: .5em .9em .6em;
+  margin: 0 .25rem .5rem 0;
+
+  &.btn-small {
+    padding: .2em .4em .3em;
+  }
+
+  &:hover {
+    outline: 0;
+    color: $btn-color-hover;
+    background-color: $btn-bgcolor-hover;
+  }
+
+  &:foucs {
+    outline: 0;
+  }
+
+  &.active {
+    background-color: #16a205;
+  }
+}
